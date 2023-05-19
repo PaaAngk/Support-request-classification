@@ -4,9 +4,9 @@
 - Install [docker](https://docs.docker.com/get-docker/) and [docker compose](https://docs.docker.com/compose/install/)
 ## Installation
 1. Clone/Download repository
+2. Unpack model to folder: \tf_serving\models\feed_forward\1\
 3. `docker-compose build`
 4. `docker-compose up` 
-5. Unpack model to folder: \tf_serving\models\feed_forward\1\
 ## Usage
 
 ### Predict input image
