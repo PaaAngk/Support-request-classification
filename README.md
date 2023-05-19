@@ -9,7 +9,7 @@
 4. `docker-compose up` 
 ## Usage
 
-### Predict input image
+### Predict
 URL `localhost:80`
 POST `v1/predict`  
 **Request Body**  
