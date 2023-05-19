@@ -1,0 +1,49 @@
+version: "3.9"
+services:
+  flask_app:
+    container_name: flask_app
+    build:
+      context: ./flask_app
+      dockerfile: Dockerfile
+    restart: "on-failure"
+    ports:
+      - "80:5000"
+    volumes:
+      - ./flask_app:/flask_app
+    depends_on:
+      - tf_serving
+      - memcache
+    networks:
+      flask-network:
+        aliases:
+          - flask_app
+
+  tf_serving:
+    container_name: tf_serving
+    build:
+      context: ./tf_serving
+      dockerfile: Dockerfile
+    restart: "on-failure"
+    ports:
+        - "8500"
+        - "8501"
+    volumes:
+        - ./tf_serving/models:/models
+    networks:
+      - flask-network
+
+  memcache:
+    container_name: memcache
+    build:
+      context: ./memcache
+      dockerfile: Dockerfile
+    restart: "on-failure"
+    ports:
+      - "11211"
+    volumes:
+      - ./memcache:/memcache
+    networks:
+      - flask-network
+
+networks:
+  flask-network:
