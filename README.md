@@ -5,8 +5,8 @@
 ## Installation
 1. Clone/Download repository
 3. `docker-compose build`
-4. `docker-compose up` or `docker-compose up -d` if you want to run it without terminal
-5. unpack model to \tf_serving\models\feed_forward\1\
+4. `docker-compose up` 
+5. Unpack model to folder: \tf_serving\models\feed_forward\1\
 ## Usage
 
 ### Predict input image
