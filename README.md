@@ -3,7 +3,7 @@
 ## Dependencies
 - Install [docker](https://docs.docker.com/get-docker/) and [docker compose](https://docs.docker.com/compose/install/)
 ## Installation
-1. Clone/Download repository with
+1. Clone/Download repository
 3. `docker-compose build`
 4. `docker-compose up` or `docker-compose up -d` if you want to run it without terminal
 5. unpack model to \tf_serving\models\feed_forward\1\
